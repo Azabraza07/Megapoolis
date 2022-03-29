@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#111111">
+	<title>Мегаполис</title>
+	<!-- <link rel="preload" href="fonts/RobotoRegular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/RobotoMedium.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/RobotoBold.woff2" as="font" type="font/woff2" crossorigin> -->
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<!-- <link rel="stylesheet" href="code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css"> -->
+	<link rel="stylesheet" href="css/vendor.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script defer src="js/main.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+	<script defer src="js/calculator.js"></script>
+
+</head>
+
+<body class="page__body">
+	<div class="site-container">
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<a class="header__logo" href="#">
+						<img loading="lazy" src="img/logo.svg" class="image" width="180" height="146" alt="logo">
+					</a>
+					<div class="header__top">
+						<div class="header__social">
+							<a class="header__social-messanger" href="#"><img loading="lazy" src="img/instagram.svg"
+									class="header__social-messanger-image" width="32" height="32" alt="instagram"></a>
+							<a class="header__social-messanger" href="#"><img loading="lazy" src="img/facebook.svg"
+									class="header__social-messanger-image" width="32" height="32" alt="facebook"></a>
+							<a class="header__social-messanger" href="#"><img loading="lazy" src="img/whatsapp.svg"
+									class="header__social-messanger-image" width="32" height="32" alt="whatsapp"></a>
+						</div>
+						<div class="address">
+							<div class="address__box">
+								<img loading="lazy" src="img/location.svg" class="address__image" width="32" height="32"
+									alt="location">
+								<p class="address__text">г. Нур-Султан <br>
+									<span>ул. А. Бараева 21, НП — 13</span>
+								</p>
+							</div>
+						</div>
+						<div class="phone">
+							<div class="phone__box">
+								<img loading="lazy" src="img/phone.svg" class="image" width="32" height="32"
+									alt="phone">
+								<a class="phone__num" href="tel:+7 700 777 57 67">+7 (700-77) 7-57-67</a>
+								<p class="phone__text">
+									Пн — Пт с 10:00 до 18:00
+									Сб с 10:00 до 15:00
+								</p>
+							</div>
+						</div>
+						<button class="btn-reset btn" data-modal="#modal__application" data-gall>Перезвоните
+							мне</button>
+						<!-- <button class="intro__btn page__btn" data-modal="#modal__application" data-gall>
+							Оставить заявку
+						</button> -->
+					</div>
+				</div>
+
+				<div class="header__bottom">
+					<nav class="nav" title="Главное меню">
+						<ul class="menu list-reset nav__list">
+							<li class="nav__item"><a href="#calculator" class="nav__link" data-scroll>Калькулятор</a>
+							</li>
+							<li class="nav__item"><a href="#terms" class="nav__link" data-scroll>Условия</a></li>
+							<li class="nav__item"><a href="#job" class="nav__link" data-scroll>Схема работы</a></li>
+							<li class="nav__item"><a href="#documents" class="nav__link" data-scroll>Документы</a></li>
+							<li class="nav__item"><a href="#questions" class="nav__link" data-scroll>Вопросы и ответ</a>
+							</li>
+							<li class="nav__item"><a href="#contacts" class="nav__link" data-scroll>Контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="burger__menu">
+					<input type="checkbox" id="check-menu">
+					<label class="label-menu__burger" for="check-menu"></label>
+					<div class="burger__line first"></div>
+					<div class="burger__line second"></div>
+					<div class="burger__line third"></div>
+					<div class="burger__line fourth"></div>
+					<nav class="main-menu">
+						<ul class="menu list-reset main-menu__list">
+							<li class="main-menu_list-item"><a href="#calculator" class="main-menu-nav_link"
+									data-scroll>Калькулятор</a></li>
+							<li class="main-menu_list-item"><a href="#terms" class="main-menu-nav_link"
+									data-scroll>Условия</a></li>
+							<li class="main-menu_list-item"><a href="#job" class="main-menu-nav_link" data-scroll>Схема
+									работы</a></li>
+							<li class="main-menu_list-item"><a href="#documents" class="main-menu-nav_link"
+									data-scroll>Документы</a></li>
+							<li class="main-menu_list-item"><a href="#questions" class="main-menu-nav_link"
+									data-scroll>Вопросы и ответ</a></li>
+							<li class="main-menu_list-item"><a href="#contacts" class="main-menu-nav_link"
+									data-scroll>Контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+
+			</div>
+		</header>
+
+		<main class="main">
+			<section class="money">
+				<div class="container">
+					<h1 class="money__title">Получи деньги под залог авто за 1 час</h1>
+					<div class="money__button">
+						<button class="btn-reset money__button-apply" data-modal="#modal__application-2"
+							data-gall>Оставить заявку</button>
+						<button class="btn-reset money__button-calculate" data-modal="#modal__application-3" >Рассчитать</button>
+					</div>
+					<div class="money__inner">
+						<div class="money__item">
+							<img loading="lazy" src="img/money.svg" class="money__image" width="48" height="48"
+								alt="money">
+							<div class="money__item-content">
+								<h4 class="money__item-content__title">До 20 000 000 ТГ</h4>
+								<p class="money__item-content__text">До 60% от рыночной стоимости</p>
+							</div>
+						</div>
+
+						<div class="money__item">
+							<img loading="lazy" src="img/drive.svg" class="money__image" width="48" height="48"
+								alt="drive">
+							<div class="money__item-content">
+								<h4 class="money__item-content__title">С правом вождения</h4>
+								<p class="money__item-content__text">Автомобиль остается у вас</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="interest-rate">Процентная ставка 3,7% в месяц</div>
+				</div>
+			</section>
+
+			<!-- calculator -->
+			<section class="_calculator" id="calculator">
+				<div class="container">
+					<h2>Калькулятор</h2>
+					<!-- Summ money -->
+					<p class="__overall_summ_and_money">Сумма, тенге</p>
+					<div class="__calculator_operation_and_results_of_degrees">
+						<!-- main input -->
+						<div class="__calculator_volume_and_moneys">
+							<p id="selectValue">100000</p>
+							<div id="slider-1"></div>
+
+							<!-- <input class="__calculator_degrees_volume" value="5100000" id="degrees_volume" name="degrees_volume"
+								onclick="clickSevent();" min="100000" max="10000000" type="range"> -->
+							<div class="__calculator_volume_start_end_numbers">
+								<span>
+									100 000
+								</span>
+								<span>
+									10 000 000
+								</span>
+							</div>
+						</div>
+						<div class="__calculator_degrees_result">
+							<div>
+								<p class="__calculator_result_degrees_title_degrees">Процентная ставка:</p>
+								<p class="__calculator_result_degrees_numbers_degrees">от <span>2.3</span>%</p>
+							</div>
+							<div>
+								<p class="__calculator_result_degrees_payment_overall">Переплата всего:</p>
+								<p class="__calculator_result_degrees_payment_numbers">782 191 тг</p>
+							</div>
+						</div>
+					</div>
+					<!-- Term money -->
+					<p class="__overall_summ_and_money">Срок, год</p>
+					<div class="__calculator_operation_and_results_of_money">
+						<!-- main input -->
+
+						<div class="__calculator_volume_and_numbers">
+							<p id="select-value-2">1</p>
+							<div id="slider-2"></div>
+							<!-- <input class="__calculator_money_volume" id="money_volume" value="7" name="money_volume" min="1"
+								onclick="clickEvent();" max="12" type="range"> -->
+							<div class="__calculator_volume_start_end_numbers">
+								<span>
+									1
+								</span>
+								<span>
+									12
+								</span>
+							</div>
+						</div>
+						<div class="__calculator_money_result">
+							<div>
+								<p class="__calculator_result_money_title">Ежемесячный платеж:</p>
+								<p class="__calculator_result_money_numbers">840 313 тг</p>
+							</div>
+							<div>
+								<p class="__calculator_result_money_payment_overall">Итого к возврату:</p>
+								<p class="__calculator_result_money_payment_numbers">5 882 191 тг</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</section>
+			<!-- end of calculator -->
+
+			<section class="simply-terms" id="terms">
+				<div class="container">
+					<h2 class="simply-terms__title">Простые условия</h2>
+					<div class="simply-terms__inner">
+						<div class="simply-terms__item--active">
+							<div class="simply-terms__item-title--active">2 документа для получения</div>
+							<p class="simply-terms__item-text--active">Удостоверение и техпаспорт</p>
+						</div>
+
+						<div class="simply-terms__item">
+							<div class="simply-terms__item-title">Одобряем в 92% случаев</div>
+							<p class="simply-terms__item-text">Нам не важен ваш доход, закредитованность, лояльны
+								к кредитнеой
+								истории</p>
+						</div>
+
+						<div class="simply-terms__item-nav">
+							<ul class="list-reset simply-term__item-list">
+								<li class="simply-terms__item-text"><img loading="lazy" src="img/svg/icon.svg"
+										class="simply-terms__item-image" width="12" height="12" alt="icon">Отсутствие
+									обязательных
+									страховок и скрытых комиссий</li>
+								<li class="simply-terms__item-text"><img loading="lazy" src="img/svg/icon.svg"
+										class="simply-terms__item-image" width="12" height="12" alt="icon">Досрочное
+									погашение без
+									комиссий </li>
+								<li class="simply-terms__item-text"><img loading="lazy" src="img/svg/icon.svg"
+										class="simply-terms__item-image" width="12" height="12" alt="icon">Низкая пеня
+									и лояльные
+									условия в случае просрочки</li>
+								<li class="simply-terms__item-text"><img loading="lazy" src="img/svg/icon.svg"
+										class="simply-terms__item-image" width="12" height="12" alt="icon">Без GPS
+									и страховки —
+									мы доверяем вам</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="get-money" id="job">
+				<div class="container">
+					<h2 class="get-money__title">3 простых шага для получения денег</h2>
+					<div class="get-money__inner">
+						<div class="get-money__item">
+							<img loading="lazy" src="img/get-money1.svg" class="get-money__item-image" width="48"
+								height="48" alt="get-money-1">
+							<div class="get-money__item-text">Введите данные и отправьте заявку</div>
+							<img loading="lazy" src="img/1.svg" class="get-money__item-image2" width="122" height="235"
+								alt="1">
+						</div>
+
+						<div class="get-money__item">
+							<img loading="lazy" src="img/get-money2.svg" class="get-money__item-image" width="48"
+								height="48" alt="get-money-2">
+							<div class="get-money__item-text">Вам перезвонит нашменеджер</div>
+							<img loading="lazy" src="img/2.svg" class="get-money__item-image2" width="122" height="235"
+								alt="2">
+						</div>
+
+						<div class="get-money__item">
+							<img loading="lazy" src="img/get-money3.svg" class="get-money__item-image" width="48"
+								height="48" alt="get-money-3">
+							<div class="get-money__item-text">Посетите офис и получите деньги за 1 час</div>
+							<img loading="lazy" src="img/3.svg" class="get-money__item-image2" width="122" height="235"
+								alt="3">
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="law-work" id="documents">
+				<div class="container">
+					<h2 class="law-work__title"> Надежно! Работаем в рамках закона</h2>
+					<div class="law-work__inner">
+						<div class="law-work__item">
+							<picture>
+								<source srcset="img/licensy.avif" type="image/avif">
+								<source srcset="img/licensy.webp" type="image/webp">
+								<img loading="lazy" src="img/licensy.avif" class="law-work-image" width="280"
+									height="414" alt="licensy">
+							</picture>
+
+							<picture>
+								<source srcset="img/notification.avif" type="image/avif">
+								<source srcset="img/notification.webp" type="image/webp">
+								<img loading="lazy" src="img/notification.avif" class="law-work-image" width="280"
+									height="414" alt="notification">
+							</picture>
+							<div class="law-work__content">
+								<div class="law-work__title">Осуществляем деятельность в рамках <br> законов Республики
+									Казахстан</div>
+								<p class="law-work__text">Условия договора и ставка утвержены Агентством <br> Республики
+									Казахстан по регулированию
+									и
+									разваитию <br> финансового рынка </p>
+								<div class="law-work__subtitle">
+									Реестр микрофинансовых организаций <br> № 04.21.0001.М от 28.01.2021
+								</div>
+								<div class="law-work__subtitle">
+									Лицензия на осущетсвление микрофинансовой деятельности № 01. 210015.Л
+								</div>
+								<div class="law-work__text--green"><img loading="lazy" src="img/svg/icon.svg"
+										class="law-work__text-image" width="12" height="12" alt="icon">Правила
+									предоставления
+									микрокредитов </div>
+
+								<div class="law-work__text--green"><img loading="lazy" src="img/svg/icon.svg"
+										class="law-work__text-image" width="12" height="12" alt="icon">Типовой договор
+									о предоставлении микрокредитов (договор присоединения)</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="questions" id="questions">
+				<div class="container">
+					<h2 class="questions__title">Вопросы и ответы</h2>
+					<div class="questions__inner">
+
+						<div class="list-group">
+							<div class="list-group-item list-header" data-name="accordeon-title">
+								<img loading="lazy" src="img/accordeon-icon.svg" class="accordeon-title__image"
+									width="12" height="7" alt="icon">
+								1.Основные условия
+							</div>
+							<div class="list-group-item list-content hidden">
+								<ul class="accordeon__list">
+									<li class="accordeon__list-item">Максимальная сумма микрокредита 20 000 000 тенге
+									</li>
+									<li class="accordeon__list-item">Срок микрокредита: минимальный срок кредитования
+										превышает 1
+										день.Максимальный — 1 год</li>
+									<li class="accordeon__list-item">Автомобиль остается у владельца</li>
+								</ul>
+							</div>
+
+							<div class="list-group-item list-header" data-name="accordeon-title">
+								<img loading="lazy" src="img/accordeon-icon.svg" class="accordeon-title__image"
+									width="12" height="7" alt="icon">
+								2.Можно ли взять микрокредит на короткий срок?
+							</div>
+							<div class="list-group-item list-content hidden">
+								<ul class="accordeon__list">
+									<li class="accordeon__list-item">Максимальная сумма микрокредита 20 000 000 тенге
+									</li>
+									<li class="accordeon__list-item">Срок микрокредита: минимальный срок кредитования
+										превышает 1
+										день.Максимальный — 1 год</li>
+									<li class="accordeon__list-item">Автомобиль остается у владельца</li>
+								</ul>
+							</div>
+
+							<div class="list-group-item list-header" data-name="accordeon-title">
+								<img loading="lazy" src="img/accordeon-icon.svg" class="accordeon-title__image"
+									width="12" height="7" alt="icon">
+								3.Требования к заемщику и авто
+							</div>
+							<div class="list-group-item list-content hidden">
+								<ul class="accordeon__list">
+									<li class="accordeon__list-item">Максимальная сумма микрокредита 20 000 000 тенге
+									</li>
+									<li class="accordeon__list-item">Срок микрокредита: минимальный срок кредитования
+										превышает 1
+										день.Максимальный — 1 год</li>
+									<li class="accordeon__list-item">Автомобиль остается у владельца</li>
+								</ul>
+							</div>
+
+							<div class="list-group-item list-header" data-name="accordeon-title">
+								<img loading="lazy" src="img/accordeon-icon.svg" class="accordeon-title__image"
+									width="12" height="7" alt="icon">
+								4.Какие документы нужно для получения микрокредита?
+							</div>
+							<div class="list-group-item list-content hidden">
+								<ul class="accordeon__list">
+									<li class="accordeon__list-item">Максимальная сумма микрокредита 20 000 000 тенге
+									</li>
+									<li class="accordeon__list-item">Срок микрокредита: минимальный срок кредитования
+										превышает 1
+										день.Максимальный — 1 год</li>
+									<li class="accordeon__list-item">Автомобиль остается у владельца</li>
+								</ul>
+							</div>
+
+							<div class="list-group-item list-header" data-name="accordeon-title">
+								<img loading="lazy" src="img/accordeon-icon.svg" class="accordeon-title__image"
+									width="12" height="7" alt="icon">
+								5.Где проходит оформление микрокредита
+							</div>
+							<div class="list-group-item list-content hidden">
+								<ul class="accordeon__list">
+									<li class="accordeon__list-item">Максимальная сумма микрокредита 20 000 000 тенге
+									</li>
+									<li class="accordeon__list-item">Срок микрокредита: минимальный срок кредитования
+										превышает 1
+										день.Максимальный — 1 год</li>
+									<li class="accordeon__list-item">Автомобиль остается у владельца</li>
+								</ul>
+							</div>
+
+							<div class="list-group-item list-header" data-name="accordeon-title">
+								<img loading="lazy" src="img/accordeon-icon.svg" class="accordeon-title__image"
+									width="12" height="7" alt="icon">
+								6.Какие договоры подписываются и требуется ли переоформлять авто?
+							</div>
+							<div class="list-group-item list-content hidden">
+								<ul class="accordeon__list">
+									<li class="accordeon__list-item">Максимальная сумма микрокредита 20 000 000 тенге
+									</li>
+									<li class="accordeon__list-item">Срок микрокредита: минимальный срок кредитования
+										превышает 1
+										день.Максимальный — 1 год</li>
+									<li class="accordeon__list-item">Автомобиль остается у владельца</li>
+								</ul>
+							</div>
+
+							<div class="list-group-item list-header" data-name="accordeon-title">
+								<img loading="lazy" src="img/accordeon-icon.svg" class="accordeon-title__image"
+									width="12" height="7" alt="icon">
+								7.Можно ли оформить микрокредит по доверенности?
+							</div>
+							<div class="list-group-item list-content hidden">
+								<ul class="accordeon__list">
+									<li class="accordeon__list-item">Максимальная сумма микрокредита 20 000 000 тенге
+									</li>
+									<li class="accordeon__list-item">Срок микрокредита: минимальный срок кредитования
+										превышает 1
+										день.Максимальный — 1 год</li>
+									<li class="accordeon__list-item">Автомобиль остается у владельца</li>
+								</ul>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="contacts" id="contacts">
+				<div class="container">
+					<h2 class="contacts__title">Контакты</h2>
+					<div class="contacts__text">Оставьте контакты и мы перезвоним вам <br> в течение 20 минкут</div>
+
+					<form action="#" class="form order-form">
+						<label class="form__label">
+							<input type="text" name="Имя" class="input-reset form__input input-name" placeholder="ФИО">
+						</label>
+
+						<label class="form__label">
+							<input type="tel" name="Телефон" class="input-reset form__input input-tel"
+								placeholder="Номер телефона">
+						</label>
+
+						<button class="btn-reset form__btn">Оставить заявку</button>
+
+						<label class="custom-checkbox">
+							<input type="checkbox" class="custom-checkbox__field">
+							<span class="custom-checkbox__content">Оставляя заявку, я предоставляю согласие на обработку
+								персональных
+								данных</span>
+						</label>
+					</form>
+
+					<div class="contacts__info">
+						<img loading="lazy" src="img/tel.svg" class="image" width="48" height="48" alt="tel">
+						<div class="contacts__info-box">
+							<a class="contacts__num" href="tel:+7 700 777 57 67">+7 (700-77) 7-57-67</a>
+							<div class="contacts__schedule">
+								Пн — Пт с 10:00 до 18:00 <br>
+								Сб с 10:00 до 15:00
+							</div>
+							<a class="contacts__callback" href="#" data-modal="#modal__application" data-gall>Перезвоните мне</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="bottom-nav">
+				<div class="container">
+					<a href="#">
+						<img  loading="lazy" src="img/bottom-nav.svg" class="image" width="100" height="82" alt="logo">
+					</a>
+					
+					<nav class="nav" title="">
+						<ul class="list-reset bottom-nav__list">
+							<li class="bottom-nav__item"><a href="#calculator" class="bottom-nav__link">Калькулятор</a>
+							</li>
+							<li class="bottom-nav__item"><a href="#terms" class="bottom-nav__link">Условия</a></li>
+							<li class="bottom-nav__item"><a href="#job" class="bottom-nav__link">Схема работы</a></li>
+							<li class="bottom-nav__item"><a href="#documents" class="bottom-nav__link">Документы</a>
+							</li>
+							<li class="bottom-nav__item"><a href="#questions" class="bottom-nav__link">Вопросы
+									и ответы</a>
+							</li>
+							<li class="bottom-nav__item"><a href="#contacts" class="bottom-nav__link">Контакты</a></li>
+						</ul>
+					</nav>
+					<button class="btn-reset bottom__burger" aria-label="Открыть меню" aria-expanded="false" data-burger
+						data-menu>
+						<span class="bottom__burger__line"></span>
+					</button>
+				</div>
+			</section>
+
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<p>
+					Лицензия на осуществление микрофинансовой деятельности № 04.21.0001.М от 28.01.2021 <br>
+					© 2022. Все права защищены
+				</p>
+			</div>
+		</footer>
+		<div class="footer__alux">
+			<p>Разработано в</p>
+			<a href="https://www.a-lux.kz/" target="_blank">
+				<img src="img/a_lux-logo.png" alt="a-luxe">
+			</a>
+		</div>
+
+		
+
+		<!-- modal start -->
+		<div class="modal" id="modal__application">
+			<div class="modal__content modal__application">
+				<button class="modal__close" data-close="">
+					<img src="img/modal-close.svg" alt="X">
+				</button>
+				<h4 class="modal__application-title">
+					Оставить заявку
+				</h4>
+				<p class="modal__application-text">
+					Ответим на все ваши вопросы
+				</p>
+				<form class="modal__application-form" action="/callback" method="POST">
+					<input type="hidden" name="_token" value="L5JrJEhJ4rmZshoS5J1LVZmmWsI5oXzike0jFlhF"> <input
+						class="modal__application-input input-words" type="text" required name="name" placeholder="ФИО">
+					<input class="modal__application-input input-number" required type="tel" name="number" id="phone"
+						placeholder="Номер телефона">
+					<input class="modal__application-btn page__btn" type="submit" value="Оставить заявку">
+
+					<label class="custom-checkbox">
+						<input type="checkbox" class="custom-checkbox__field">
+						<span class="custom-checkbox__content">Я даю своё согласие на обработку
+							персональных данных</span>
+					</label>
+
+				</form>
+			</div>
+		</div>
+
+		<div class="modal" id="modal__application-2">
+			<div class="modal__content modal__application">
+				<button class="modal__close" data-close="">
+					<img src="img/modal-close.svg" alt="X">
+				</button>
+				<h4 class="modal__application-title">
+					Оставить заявку
+				</h4>
+				<p class="modal__application-text">
+					Ответим на все ваши вопросы
+				</p>
+				<form class="modal__application-form" action="/callback" method="POST">
+					<input type="hidden" name="_token" value="L5JrJEhJ4rmZshoS5J1LVZmmWsI5oXzike0jFlhF"> <input
+						class="modal__application-input input-words" type="text" required name="name" placeholder="ФИО">
+					<input class="modal__application-input input-number" required type="tel" name="number" id="phone2"
+						placeholder="Номер телефона">
+					<input class="modal__application-input input-mail" required type="mail" name="mail" id="mail"
+						placeholder="Email">
+
+					<input class="modal__application-input input-loan__amount" required type="text" name="loan amount"
+						id="loan amount" placeholder="Сумма займа">
+
+					<input class="modal__application-input input-loan__term" required type="text" name="loan term"
+						id="loan term" placeholder="Срок займа">
+					<input class="modal__application-btn page__btn" type="submit" value="Оставить заявку">
+
+					<label class="custom-checkbox">
+						<input type="checkbox" class="custom-checkbox__field">
+						<span class="custom-checkbox__content">Я даю своё согласие на обработку
+							персональных данных</span>
+					</label>
+				</form>
+			</div>
+		</div>
+
+		<div class="modal" id="modal__application-3">
+			<div class="modal__content modal__application">
+				<button class="modal__close" data-close="">
+					<img src="img/modal-close.svg" alt="X">
+				</button>
+				<h4 class="modal__application-title">
+					Оставить заявку
+				</h4>
+				<p class="modal__application-text">
+					Ответим на все ваши вопросы
+				</p>
+				<form class="modal__application-form" action="/callback" method="POST">
+					<input class="modal__application-input input-number" required type="tel" name="number" id="phone3"
+						placeholder="Номер телефона">
+					<input class="modal__application-input input-mail" required type="mail" name="mail" id="mail2"
+						placeholder="Email">
+
+					<input class="modal__application-input input-loan__amount" required type="text" name="loan amount"
+						id="loan amount" placeholder="Сумма займа">
+
+					<input class="modal__application-input input-loan__term" required type="text" name="loan term"
+						id="loan term" placeholder="Срок займа">
+					<input class="modal__application-btn page__btn" type="submit" value="Оставить заявку">
+
+					<label class="custom-checkbox">
+						<input type="checkbox" class="custom-checkbox__field">
+						<span class="custom-checkbox__content">Я даю своё согласие на обработку
+							персональных данных</span>
+					</label>
+				</form>
+			</div>
+		</div>
+
+	</div>
+	<script src="js/calculator.js"></script>
+	<script src="js/modal.js"></script>
+</body>
+
+</html>
